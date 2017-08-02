@@ -1,11 +1,16 @@
 #test build
 FROM imagine10255/centos6-lnmp-php56:latest
 
-RUN mkdir /app -p
+WORKDIR /home/config/nginx/sites-enabled/
+RUN rm -rf default.conf
+COPY default.conf default.conf
 
-WORKDIR /app
+WORKDIR /home/website/default/
+RUN rm -rf *
+COPY . .
+#COPY . /home/website/default/
 
-COPY . /app
+RUN echo "daemon off;" >> /home/config/nginx/nginx.conf
 
 
 
