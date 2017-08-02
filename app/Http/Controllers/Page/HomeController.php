@@ -23,8 +23,4 @@ class HomeController extends Controller
     {
         return view('page.home.login');
     }
-
-
-
-
 }
