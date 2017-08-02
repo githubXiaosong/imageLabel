@@ -1,4 +1,3 @@
-#test build
 FROM imagine10255/centos6-lnmp-php56:latest
 
 #WORKDIR /home/config/nginx/sites-enabled/
@@ -9,7 +8,7 @@ WORKDIR /home/website/default/
 RUN rm -rf *
 COPY . .
 
-RUN echo "daemon off;" >> /home/config/nginx/nginx.conf
+#RUN echo "daemon off;" >> /home/config/nginx/nginx.conf
 
 
 
