@@ -9,5 +9,5 @@ ENTRYPOINT cp default.conf /home/config/nginx/sites-enabled/
 ENTRYPOINT chmod 777 -R storage/
 ENTRYPOINT chmod 777 -R bootstrap/
 
-#RUN echo "daemon off;" >> /home/config/nginx/nginx.conf
+ENTRYPOINT echo "daemon off;" >> /home/config/nginx/nginx.conf
 
