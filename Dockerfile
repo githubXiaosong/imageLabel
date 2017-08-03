@@ -1,4 +1,4 @@
-#test
+
 FROM imagine10255/centos6-lnmp-php56:latest
 
 ADD default.conf /home/config/nginx/sites-enabled/default.conf
